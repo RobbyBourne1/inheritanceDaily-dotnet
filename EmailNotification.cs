@@ -7,15 +7,15 @@ namespace inheritanceDaily_dotnet
         public string Recipient { get; set; }
         public string SmtpProvider { get; set; }
 
-        public EmailNotification(string recipient, string provider, string body, string subject):base(body,subject)
+        public EmailNotification(string recipient, string smtpprovider, string body, string subject):base(body,subject)
         {
             Recipient = recipient;
-            SmtpProvider = provider;
+            SmtpProvider = smtpprovider;
         }
 
         public override void Transport()
         {
-            Console.WriteLine($"{Recipient},{SmtpProvider}");
+            Console.WriteLine(Recipient, SmtpProvider);
 
         }
     }
