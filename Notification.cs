@@ -4,20 +4,19 @@ namespace inheritanceDaily_dotnet
 {
     public abstract class Notification
     {
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
         public string Subject { get; set; }
         public string Body { get; set; }
 
         public Notification(string subject, string body)
         {
-            Subject = subject;
-            Body = body;
-            CreatedAt = DateTime.Now;
+            this.Subject = subject;
+            this.Body = body;
         }
 
-        public void Transport();
+        public abstract void Transport();
         {
-            throws(NoTransportException);
+            throw new NoTransportException();
         }
     }
 }
