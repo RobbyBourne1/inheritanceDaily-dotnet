@@ -15,8 +15,5 @@ namespace inheritanceDaily_dotnet
         }
 
         public abstract void Transport();
-        {
-            throw new NoTransportException();
-        }
     }
 }

@@ -6,7 +6,10 @@ namespace inheritanceDaily_dotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var email = new EmailNotification("Robby", "Verizon", "Hello World", "Welcome");
+            Console.WriteLine(email);
+            var text = new TextNotification("Bob", "Verizon", "Hi", "Welcome to Verizon");
+            Console.WriteLine(text);
         }
     }
 }

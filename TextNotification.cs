@@ -13,7 +13,7 @@ namespace inheritanceDaily_dotnet
             SmsProvider = smsprovider;
         }
 
-        public void Transport()
+        public override void Transport()
         {
             Console.WriteLine(Recipient, SmsProvider);
         }
