@@ -15,7 +15,7 @@ namespace inheritanceDaily_dotnet
 
         public override void Transport()
         {
-            Console.WriteLine(Recipient, SmsProvider);
+            Console.WriteLine($"You recieved a message from {Recipient} on a {SmsProvider} line. Subject is: {Subject} and message is: {Body}");
         }
     }
 }
